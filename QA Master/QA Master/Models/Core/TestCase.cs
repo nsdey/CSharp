@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 using QA_Master.Forms;
 using QA_Master.Models.Extensions;
 using QA_Master.Utitities;
@@ -20,7 +21,7 @@ namespace QA_Master.Models.Core
         public List<string?>? WorkflowId_FK { get; set; } = [];
 
         private ObservableCollectionEachItem<TestCaseWorkflow>? workflows = [];
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public ObservableCollectionEachItem<TestCaseWorkflow>? Workflows
         {
             get { if (workflows == null) Workflows = []; return workflows; }
@@ -42,13 +43,13 @@ namespace QA_Master.Models.Core
             }
         }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? BaseURL { get { return _BaseURL; } set { _BaseURL = value; } }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public int WorkflowSelectedIndex { get; set; }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public int ActionSelectedIndex { get; set; }
 
         public override Type? AttachedEditor => typeof(CommonEditor);

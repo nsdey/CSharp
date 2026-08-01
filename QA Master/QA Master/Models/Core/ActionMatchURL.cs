@@ -2,6 +2,7 @@
 using QA_Master.Models.Extensions;
 using System.ComponentModel;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 
 namespace QA_Master.Models.Core
 {
@@ -9,7 +10,7 @@ namespace QA_Master.Models.Core
     [Description("Match Browser URL")]
     public class ActionMatchURL : Action
     {
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? URL
         {
             get
