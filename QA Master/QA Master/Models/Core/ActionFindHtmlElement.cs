@@ -3,6 +3,7 @@ using QA_Master.Models.Enums;
 using QA_Master.Models.Extensions;
 using System.ComponentModel;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 
 namespace QA_Master.Models.Core
 {
@@ -10,7 +11,7 @@ namespace QA_Master.Models.Core
     [Description("Find element")]
     public class ActionFindHtmlElement : Action
     {
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string[] GetAllFindHtmlElementBy = Extension.GetAllEnumNames(typeof(EnumActionFindHtmlElementBy));
 
         private EnumActionFindHtmlElementBy enumActionFindHtmlElementBy = EnumActionFindHtmlElementBy.None;
@@ -27,10 +28,10 @@ namespace QA_Master.Models.Core
             set { findHtmlElementValue = value; OnPropertyChanged(); }
         }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public override Type? AttachedEditor => typeof(Page_ActionFindHtmlElement);
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         private List<Perform> getPerformClasses =
         [
             new PerformClick(),
@@ -45,7 +46,7 @@ namespace QA_Master.Models.Core
             new PerformUploadFile(),
         ];
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public List<Perform>? GetPerformClasses
         {
             get
@@ -62,6 +63,7 @@ namespace QA_Master.Models.Core
             }
         }
 
+        [JsonIgnore]
         public Perform? GetPerformClassesItem
         {
             get

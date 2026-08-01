@@ -4,6 +4,7 @@ using QA_Master.Models.Extensions;
 using QA_Master.Utitities;
 using System.ComponentModel;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 
 namespace QA_Master.Models.Core
 {
@@ -16,7 +17,7 @@ namespace QA_Master.Models.Core
             if (Actions != null) Actions.CollectionChanged += OnCollectionChanged;
         }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? VariableKey => Guid.NewGuid().ToString();
 
         private string? _Id = Guid.NewGuid().ToString();

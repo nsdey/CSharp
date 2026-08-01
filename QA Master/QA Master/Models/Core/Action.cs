@@ -1,5 +1,6 @@
 ﻿using QA_Master.Models.Extensions;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 
 namespace QA_Master.Models.Core
 {
@@ -11,9 +12,17 @@ namespace QA_Master.Models.Core
     [XmlInclude(typeof(ActionNavigate))]
     [XmlInclude(typeof(ActionWait))]   
     [Serializable]
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type")]
+    [JsonDerivedType(typeof(ActionAdCloser), "adCloser")]
+    [JsonDerivedType(typeof(ActionManualInterrupt), "manualInterrupt")]
+    [JsonDerivedType(typeof(ActionFindHtmlElement), "findHtmlElement")]
+    [JsonDerivedType(typeof(ActionMatchTitle), "matchTitle")]
+    [JsonDerivedType(typeof(ActionMatchURL), "matchUrl")]
+    [JsonDerivedType(typeof(ActionNavigate), "navigate")]
+    [JsonDerivedType(typeof(ActionWait), "wait")]
     public class Action : Common
     {
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public Workflow? Workflow { get; set; } = null;
 
         private Perform? perform = null;
@@ -37,7 +46,7 @@ namespace QA_Master.Models.Core
         public Action(string defaultValue) { DefaultValue = defaultValue; }
 
         private byte[]? _Screenshot = null;
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public byte[]? Screenshot { get { return Perform == null ? _Screenshot : Perform.Screenshot; } set { _Screenshot = value; } }
 
         public string GetFullDescription()

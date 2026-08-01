@@ -22,13 +22,13 @@ namespace QA_Master.Forms
 
         public string? ExeDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-        public const string projectFileFilter = "Projct files|*.project";
+        public const string projectFileFilter = "JSON project files|*.json";
 
         public string? ProjectFile { get; set; } = null;
         public string? ProjectFileDirectory => Path.GetDirectoryName(ProjectFile);
         public string? ProjectFileName => Path.GetFileName(ProjectFile);
-        public string? ProjectSavedXMLString { get; private set; } = null;
-        public string? ProjectCurrentXMLString { get; private set; } = null;
+        public string? ProjectSavedJsonString { get; private set; } = null;
+        public string? ProjectCurrentJsonString { get; private set; } = null;
 
         public string? projectFormTitle { get; set; } = null;
 
@@ -57,13 +57,13 @@ namespace QA_Master.Forms
         {
             ProjectFile = fileName;
 
-            if (ProjectFile != null) ProjectSavedXMLString = File.ReadAllText(ProjectFile);
-            else ProjectSavedXMLString = null;
+            if (ProjectFile != null) ProjectSavedJsonString = File.ReadAllText(ProjectFile);
+            else ProjectSavedJsonString = null;
 
-            Project = Project.ReadFromXML(ProjectSavedXMLString);
+            Project = Project.ReadFromJson(ProjectSavedJsonString);
 
-            ProjectCurrentXMLString = Project?.WriteToXML();
-            ProjectSavedXMLString = ProjectCurrentXMLString;
+            ProjectCurrentJsonString = Project?.WriteToJson();
+            ProjectSavedJsonString = ProjectCurrentJsonString;
 
             SetupWindowTitle();
 
