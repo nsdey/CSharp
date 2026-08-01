@@ -1,0 +1,852 @@
+{
+  "Name": "Affordable Housing",
+  "BaseURLs": "https://blasters.affordablehousing.com/\nhttps://ah.rc.affordablehousing.local/",
+  "Workflows": [
+    {
+      "Id": "4f0cabc0-a7eb-4bec-b13e-2b3911887961",
+      "Name": "test",
+      "Actions": [
+        {
+          "$type": "navigate"
+        },
+        {
+          "$type": "manualInterrupt"
+        },
+        {
+          "$type": "matchTitle",
+          "Perform": {
+            "$type": "matchTitle",
+            "Title": "AffordableHousing.com - Affordable Houses & Apartments For Rent"
+          }
+        },
+        {
+          "$type": "wait"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "clickOffset",
+            "Offset": "100,50"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "address"
+        }
+      ]
+    },
+    {
+      "Id": "4661fda5-8cf5-4fee-80ea-946ac520a313",
+      "Name": "Landing Page",
+      "Actions": [
+        {
+          "$type": "navigate"
+        },
+        {
+          "$type": "matchTitle",
+          "Perform": {
+            "$type": "matchTitle",
+            "Title": "AffordableHousing.com - Affordable Houses & Apartments For Rent"
+          }
+        },
+        {
+          "$type": "matchUrl",
+          "Perform": {
+            "$type": "matchUrl",
+            "URL": "https://blasters.affordablehousing.com/"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "e542372d-9cf7-4524-b45f-2f212d27fcfc",
+      "Name": "Sign In",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//span[text()='Sign in']"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "sekhartest"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "ah_user"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "signin-button"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "sekhartest"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "ah_pass"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "signin-with-password-button"
+        },
+        {
+          "$type": "matchUrl",
+          "Perform": {
+            "$type": "matchUrl",
+            "URL": "/LL/dashboard.aspx"
+          }
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "matchUiText",
+            "UIText": "Dashboard"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//h2[text()='Dashboard']"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//h2[text()='Dashboard']"
+        }
+      ]
+    },
+    {
+      "Id": "ddd6b65e-d4ea-4493-a31e-a32ddbaa8dbf",
+      "Name": "Listing Wizard - Single Unit",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "LinkText",
+          "FindHtmlElementValue": "Add New Listing"
+        },
+        {
+          "$type": "matchUrl",
+          "Perform": {
+            "$type": "matchUrl",
+            "URL": "/v4/pages/listingWizard/addNewListing.aspx"
+          }
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "LinkText",
+          "FindHtmlElementValue": "List a Unit"
+        }
+      ]
+    },
+    {
+      "Id": "5990c1d0-97e7-4f04-ac27-aeb462cd5be8",
+      "Name": "Listing Wizard - Single Unit - Step 1",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "5000 T-Rex Ave"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "txtAutoAddress"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "clickOffset",
+            "Offset": "100,50"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "txtAutoAddress"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "NsD678"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "txtAutoUnit"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "propertyTypeSelectMenu"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "property_bedrooms"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "1"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "property_fullbath"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "halfBaths"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "678"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "property_rentamount"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "999"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "squareFeet"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2020"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "yearBuilt"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "1000"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "property_depositeamount"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "Sekhar Dot Com"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "property_title"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "(//input[@name = 'ptsAllowed'])[2]/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'ageRestriction1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[5]/div[2]/div[2]/div[2]/button[4]"
+        }
+      ]
+    },
+    {
+      "Id": "2eb5af99-f744-4067-8941-e1c962dbf347",
+      "Name": "Listing Wizard - Common - Step 2",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "uploadFile",
+            "FilePath": "D:\\Workshop\\HB\\hb_update\\PhotoUploader\\dummyImages\\1--4L49Rh6_t5-0zmxHR7JBg.jpeg"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "uploadFile"
+        },
+        {
+          "$type": "wait",
+          "Seconds": "5"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[8]/div[2]/div/div[2]/button[5]"
+        }
+      ]
+    },
+    {
+      "Id": "906e9e79-4761-424d-b42b-bad6c4845164",
+      "Name": "Listing Wizard - Common - Step 3",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "utility_heatingsystem"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'heatingFuel1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "utility_cookingsystem"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'cookingFuel1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "utility_coolingsystem"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'cooling1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "utility_sewer"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'sewer1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "utility_water"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'water1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "utility_hotwatersystem"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'hotWater1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'electric1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'trashPickup']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'lawnService']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'pestService']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[9]/div[2]/div[2]/button[5]"
+        }
+      ]
+    },
+    {
+      "Id": "2f0657f8-ccc3-4b9e-bf18-f580923d3aa7",
+      "Name": "Listing Wizard - Single Unit - Step 4",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'accessibilityFeature1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[10]/div[2]/div[4]/button[5]"
+        }
+      ]
+    },
+    {
+      "Id": "7d9f586f-f592-429c-b3e5-18f5f35994fc",
+      "Name": "Listing Wizard - Common - Last Step",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'go8Exp1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'appFee1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'backgroundCheck1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'creditCheck1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'additionalCheckNo']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'insuranceCheckNo']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'incomeRestrict1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'leaseIncentive1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//button[text()='Finish']"
+        }
+      ]
+    },
+    {
+      "Id": "90b1aa6b-74c6-4e7f-95a2-91dac33f482c",
+      "Name": "Listing Wizard - Common - Prescreen",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "matchUiText",
+            "UIText": "Pre-Screening Settings"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//*[@id=\"root\"]/div/main/div/div[2]/div[1]"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//*[@id=\"root\"]/div/main/div/div[2]/div[4]/div[8]/button"
+        },
+        {
+          "$type": "matchUrl",
+          "Perform": {
+            "$type": "matchUrl",
+            "URL": "/v4/pages/Listing/Listing.aspx"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "259120f6-974d-4aa5-91e2-5504f472ea0e",
+      "Name": "Listing Wizard - Community",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "LinkText",
+          "FindHtmlElementValue": "Add New Listing"
+        },
+        {
+          "$type": "matchUrl",
+          "Perform": {
+            "$type": "matchUrl",
+            "URL": "/v4/pages/listingWizard/addNewListing.aspx"
+          }
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "LinkText",
+          "FindHtmlElementValue": "List a Community"
+        }
+      ]
+    },
+    {
+      "Id": "a92f0015-00f2-4be1-b967-ce0fa62e5a4e",
+      "Name": "Listing Wizard - Community - Step 1",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "Sekhar Dot Com"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "property_communityname"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "5000 T-Rex Ave"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "txtAutoAddress"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "clickOffset",
+            "Offset": "100,50"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "txtAutoAddress"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "(//input[@name = 'ptsAllowed'])[2]/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'ageRestriction1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[5]/div[2]/div[2]/div[2]/button[4]"
+        }
+      ]
+    },
+    {
+      "Id": "d4c5f903-f994-4e7d-9c26-39c918a0e126",
+      "Name": "Listing Wizard - Community - Step 4",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'accessibilityFeature1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[10]/div[2]/div[3]/button[5]"
+        }
+      ]
+    },
+    {
+      "Id": "9e062d98-b94b-478c-93ea-bb475f85dc3d",
+      "Name": "Listing Wizard - Community - Step 5",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "M1"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "model_modelname"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "1199"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[1]/div/div[1]/div/div[1]/div[2]/div/input"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "chooseDropdownItem",
+            "ByText": ""
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "model_propertytypemenu"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "model_bedrooms"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "model_fullbath"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[1]/div/div[1]/div/div[2]/div[5]/div/input"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "1678"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "model_monthlyRent"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "enterText",
+            "Text": "2020"
+          },
+          "EnumActionFindHtmlElementBy": "Id",
+          "FindHtmlElementValue": "model_yearBuilt"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "//input[@name = 'depositNegotiable1']/parent::*"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[2]/button[6]"
+        },
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[2]/button[5]"
+        }
+      ]
+    },
+    {
+      "Id": "b935eb59-aa94-42d7-9172-d7ea59a2062a",
+      "Name": "Listing Wizard - Community - Step 6",
+      "Actions": [
+        {
+          "$type": "findHtmlElement",
+          "Perform": {
+            "$type": "click"
+          },
+          "EnumActionFindHtmlElementBy": "XPath",
+          "FindHtmlElementValue": "/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[16]/div[2]/div/div/div[2]/div/button[5]"
+        }
+      ]
+    }
+  ],
+  "TestCases": [
+    {
+      "Name": "Log In",
+      "WorkflowId_FK": [
+        "4661fda5-8cf5-4fee-80ea-946ac520a313",
+        "e542372d-9cf7-4524-b45f-2f212d27fcfc"
+      ]
+    },
+    {
+      "Name": "Add Community",
+      "WorkflowId_FK": [
+        "4661fda5-8cf5-4fee-80ea-946ac520a313",
+        "e542372d-9cf7-4524-b45f-2f212d27fcfc",
+        "259120f6-974d-4aa5-91e2-5504f472ea0e",
+        "a92f0015-00f2-4be1-b967-ce0fa62e5a4e",
+        "2eb5af99-f744-4067-8941-e1c962dbf347",
+        "906e9e79-4761-424d-b42b-bad6c4845164",
+        "d4c5f903-f994-4e7d-9c26-39c918a0e126",
+        "9e062d98-b94b-478c-93ea-bb475f85dc3d",
+        "b935eb59-aa94-42d7-9172-d7ea59a2062a",
+        "7d9f586f-f592-429c-b3e5-18f5f35994fc",
+        "90b1aa6b-74c6-4e7f-95a2-91dac33f482c"
+      ]
+    }
+  ]
+}

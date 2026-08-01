@@ -1,0 +1,15 @@
+{
+  "Name": "New Projects",
+  "BaseURLs": null,
+  "Workflows": [
+    {}
+  ],
+  "TestCases": [
+    {
+      "Name": null,
+      "WorkflowId_FK": [
+        null
+      ]
+    }
+  ]
+}
