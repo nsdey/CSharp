@@ -1,0 +1,33 @@
+﻿<Page x:Class="QA_Master.Forms.Pages.Page_PerformUploadFile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QA_Master.Forms.Pages"
+      xmlns:c="clr-namespace:CalcBinding;assembly=CalcBinding"
+      xmlns:core="clr-namespace:QA_Master.Models.Core"
+      d:DataContext="{d:DesignInstance Type=core:PerformUploadFile}"
+      mc:Ignorable="d"
+      d:Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
+      Height="Auto"
+      d:DesignWidth="800"      
+      Title="Page_PerformUploadFile">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Value :" Name="lblValue" VerticalAlignment="Top" />
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtValue" d:Text="Sample Value"
+                 Text="{Binding Path=FilePath, UpdateSourceTrigger=PropertyChanged}"
+                 IsReadOnly="True"
+                 Height="{c:Binding RelativeSource={RelativeSource Self}, Path=FontSize*6}"
+                 TextWrapping="Wrap" />
+        <Button Grid.Row="1" Grid.Column="1" Name="btnBrowseFile" Content="Browse..." HorizontalAlignment="Right" Click="btnBrowseFile_Click" />
+    </Grid>
+</Page>

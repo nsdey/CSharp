@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>QA_Master</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Forms\Images\Add.png" />
+    <None Remove="Forms\Images\Clone.png" />
+    <None Remove="Forms\Images\Delete.png" />
+    <None Remove="Forms\Images\Down.png" />
+    <None Remove="Forms\Images\Edit.png" />
+    <None Remove="Forms\Images\Run.png" />
+    <None Remove="Forms\Images\Up.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CalcBinding" Version="2.5.2" />
+    <PackageReference Include="itext7" Version="8.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Selenium.Support" Version="4.19.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.19.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="123.0.6312.8600" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.34.0" />
+    <PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\Pages\Page_ActionNavigate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\Pages\Page_PerformClick.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\Pages\Page_PerformEnterText.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Forms\Images\Add.png" />
+    <Resource Include="Forms\Images\Clone.png" />
+    <Resource Include="Forms\Images\Delete.png" />
+    <Resource Include="Forms\Images\Down.png" />
+    <Resource Include="Forms\Images\Edit.png" />
+    <Resource Include="Forms\Images\Run.png" />
+    <Resource Include="Forms\Images\Up.png" />
+  </ItemGroup>
+
+</Project>
