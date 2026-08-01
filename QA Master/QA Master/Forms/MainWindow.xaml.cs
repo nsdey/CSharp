@@ -111,12 +111,12 @@ namespace QA_Master.Forms
 
             try
             {
-                string? projectSave = Session.Instance.Project?.XMLCurrentString;
+                string? projectSave = Session.Instance.Project?.JsonCurrentString;
                 
                 if (saveFile != null) File.WriteAllText(saveFile, projectSave);
 
                 Session.Instance.ProjectFile = saveFile;
-                if (Session.Instance.Project != null) Session.Instance.Project.XMLSavedString = Session.Instance.Project?.XMLCurrentString;
+                if (Session.Instance.Project != null) Session.Instance.Project.JsonSavedString = Session.Instance.Project?.JsonCurrentString;
                 Session.Instance.SetupWindowTitle();
 
                 return true;

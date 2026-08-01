@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 using QA_Master.Forms.Pages;
 using QA_Master.Models.Extensions;
 
@@ -9,7 +10,7 @@ namespace QA_Master.Models.Core
     [Description("Match Browser Title")]
     public class ActionMatchTitle : Action
     {
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? Title
         {
             get { return ((PerformMatchTitle?)Perform)?.Title; }

@@ -1,16 +1,17 @@
 ﻿using QA_Master.Models.Enums;
 using QA_Master.Utitities;
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 
 namespace QA_Master.Models.Core
 {
     public class TestCaseWorkflow : _PropertyChanged
     {
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? VariableKey { get { return Guid.NewGuid().ToString(); } set { } }
 
         private Workflow? workflow = null;
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public Workflow? Workflow
         {
             get { return workflow; }
@@ -27,16 +28,16 @@ namespace QA_Master.Models.Core
             }
         }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public ObservableCollectionEachItem<Action>? Actions => Workflow?.Actions;
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? Id => Workflow?.Id;
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public EnumRunStatus? RunStatus => Workflow?.RunStatus;
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public string? GetRunStatus => Workflow?.GetRunStatus;
 
         public TestCaseWorkflow() { }

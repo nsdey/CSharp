@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Affordable Housing</Name>
+  <BaseURLs>https://blasters.affordablehousing.com/
+https://ah.rc.affordablehousing.local/</BaseURLs>
+  <Workflows>
+    <Workflow>
+      <Id>4f0cabc0-a7eb-4bec-b13e-2b3911887961</Id>
+      <Name>test</Name>
+      <Actions>
+        <Action xsi:type="ActionNavigate" />
+        <Action xsi:type="ActionManualInterrupt" />
+        <Action xsi:type="ActionMatchTitle">
+          <Perform xsi:type="PerformMatchTitle">
+            <Title>AffordableHousing.com - Affordable Houses &amp; Apartments For Rent</Title>
+          </Perform>
+        </Action>
+        <Action xsi:type="ActionWait" />
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClickOffset">
+            <Offset>100,50</Offset>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>address</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClickOffset" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>4661fda5-8cf5-4fee-80ea-946ac520a313</Id>
+      <Name>Landing Page</Name>
+      <Actions>
+        <Action xsi:type="ActionNavigate" />
+        <Action xsi:type="ActionMatchTitle">
+          <Perform xsi:type="PerformMatchTitle">
+            <Title>AffordableHousing.com - Affordable Houses &amp; Apartments For Rent</Title>
+          </Perform>
+        </Action>
+        <Action xsi:type="ActionMatchURL">
+          <Perform xsi:type="PerformMatchURL">
+            <URL>https://blasters.affordablehousing.com/</URL>
+          </Perform>
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>e542372d-9cf7-4524-b45f-2f212d27fcfc</Id>
+      <Name>Sign In</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//span[text()='Sign in']</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>sekhartest</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>ah_user</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>signin-button</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>sekhartest</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>ah_pass</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>signin-with-password-button</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionMatchURL">
+          <Perform xsi:type="PerformMatchURL">
+            <URL>/LL/dashboard.aspx</URL>
+          </Perform>
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformMatchUIText">
+            <UIText>Dashboard</UIText>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//h2[text()='Dashboard']</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformMatchUIText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//h2[text()='Dashboard']</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>ddd6b65e-d4ea-4493-a31e-a32ddbaa8dbf</Id>
+      <Name>Listing Wizard - Single Unit</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>LinkText</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>Add New Listing</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionMatchURL">
+          <Perform xsi:type="PerformMatchURL">
+            <URL>/v4/pages/listingWizard/addNewListing.aspx</URL>
+          </Perform>
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>LinkText</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>List a Unit</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>5990c1d0-97e7-4f04-ac27-aeb462cd5be8</Id>
+      <Name>Listing Wizard - Single Unit - Step 1</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>5000 T-Rex Ave</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>txtAutoAddress</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClickOffset">
+            <Offset>100,50</Offset>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>txtAutoAddress</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClickOffset" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>NsD678</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>txtAutoUnit</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>propertyTypeSelectMenu</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>property_bedrooms</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>1</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>property_fullbath</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>halfBaths</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>678</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>property_rentamount</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>999</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>squareFeet</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2020</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>yearBuilt</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>1000</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>property_depositeamount</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>Sekhar Dot Com</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>property_title</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>(//input[@name = 'ptsAllowed'])[2]/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'ageRestriction1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[5]/div[2]/div[2]/div[2]/button[4]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>2eb5af99-f744-4067-8941-e1c962dbf347</Id>
+      <Name>Listing Wizard - Common - Step 2</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformUploadFile">
+            <FilePath>.\..\..\..\..\..\..\..\HB\hb_update\PhotoUploader\dummyImages\1--4L49Rh6_t5-0zmxHR7JBg.jpeg</FilePath>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>uploadFile</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformUploadFile" />
+        </Action>
+        <Action xsi:type="ActionWait">
+          <Seconds>5</Seconds>
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[8]/div[2]/div/div[2]/button[5]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>906e9e79-4761-424d-b42b-bad6c4845164</Id>
+      <Name>Listing Wizard - Common - Step 3</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>utility_heatingsystem</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'heatingFuel1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>utility_cookingsystem</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'cookingFuel1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>utility_coolingsystem</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'cooling1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>utility_sewer</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'sewer1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>utility_water</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'water1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>utility_hotwatersystem</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'hotWater1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'electric1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'trashPickup']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'lawnService']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'pestService']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[9]/div[2]/div[2]/button[5]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>2f0657f8-ccc3-4b9e-bf18-f580923d3aa7</Id>
+      <Name>Listing Wizard - Single Unit - Step 4</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'accessibilityFeature1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[10]/div[2]/div[4]/button[5]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>7d9f586f-f592-429c-b3e5-18f5f35994fc</Id>
+      <Name>Listing Wizard - Common - Last Step</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'go8Exp1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'appFee1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'backgroundCheck1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'creditCheck1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'additionalCheckNo']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'insuranceCheckNo']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'incomeRestrict1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'leaseIncentive1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//button[text()='Finish']</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>90b1aa6b-74c6-4e7f-95a2-91dac33f482c</Id>
+      <Name>Listing Wizard - Common - Prescreen</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformMatchUIText">
+            <UIText>Pre-Screening Settings</UIText>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//*[@id="root"]/div/main/div/div[2]/div[1]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformMatchUIText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//*[@id="root"]/div/main/div/div[2]/div[4]/div[8]/button</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionMatchURL">
+          <Perform xsi:type="PerformMatchURL">
+            <URL>/v4/pages/Listing/Listing.aspx</URL>
+          </Perform>
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>259120f6-974d-4aa5-91e2-5504f472ea0e</Id>
+      <Name>Listing Wizard - Community</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>LinkText</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>Add New Listing</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionMatchURL">
+          <Perform xsi:type="PerformMatchURL">
+            <URL>/v4/pages/listingWizard/addNewListing.aspx</URL>
+          </Perform>
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>LinkText</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>List a Community</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>a92f0015-00f2-4be1-b967-ce0fa62e5a4e</Id>
+      <Name>Listing Wizard - Community - Step 1</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>Sekhar Dot Com</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>property_communityname</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>5000 T-Rex Ave</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>txtAutoAddress</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClickOffset">
+            <Offset>100,50</Offset>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>txtAutoAddress</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClickOffset" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>(//input[@name = 'ptsAllowed'])[2]/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'ageRestriction1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[5]/div[2]/div[2]/div[2]/button[4]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>d4c5f903-f994-4e7d-9c26-39c918a0e126</Id>
+      <Name>Listing Wizard - Community - Step 4</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'accessibilityFeature1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[10]/div[2]/div[3]/button[5]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>9e062d98-b94b-478c-93ea-bb475f85dc3d</Id>
+      <Name>Listing Wizard - Community - Step 5</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>M1</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>model_modelname</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>1199</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[1]/div/div[1]/div/div[1]/div[2]/div/input</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformChooseDropdownItem">
+            <ByText />
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>model_propertytypemenu</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformChooseDropdownItem" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>model_bedrooms</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>model_fullbath</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[1]/div/div[1]/div/div[2]/div[5]/div/input</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>1678</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>model_monthlyRent</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformEnterText">
+            <Text>2020</Text>
+          </Perform>
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>Id</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>model_yearBuilt</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformEnterText" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>//input[@name = 'depositNegotiable1']/parent::*</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[2]/button[6]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[13]/div[2]/div/div[2]/button[5]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+    <Workflow>
+      <Id>b935eb59-aa94-42d7-9172-d7ea59a2062a</Id>
+      <Name>Listing Wizard - Community - Step 6</Name>
+      <Actions>
+        <Action xsi:type="ActionFindHtmlElement">
+          <Perform xsi:type="PerformClick" />
+          <GetAllFindHtmlElementBy>
+            <string>None</string>
+            <string>Id</string>
+            <string>XPath</string>
+            <string>ClassName</string>
+            <string>Name</string>
+            <string>TagName</string>
+            <string>LinkText</string>
+            <string>PartialLinkText</string>
+            <string>UIText</string>
+            <string>PartialUIText</string>
+          </GetAllFindHtmlElementBy>
+          <EnumActionFindHtmlElementBy>XPath</EnumActionFindHtmlElementBy>
+          <FindHtmlElementValue>/html/body/form/div[4]/div[1]/div[6]/div[2]/div[2]/div[16]/div[2]/div/div/div[2]/div/button[5]</FindHtmlElementValue>
+          <GetPerformClassesItem xsi:type="PerformClick" />
+        </Action>
+      </Actions>
+    </Workflow>
+  </Workflows>
+  <TestCases>
+    <TestCase>
+      <Name>Log In</Name>
+      <WorkflowId_FK>
+        <string>4661fda5-8cf5-4fee-80ea-946ac520a313</string>
+        <string>e542372d-9cf7-4524-b45f-2f212d27fcfc</string>
+      </WorkflowId_FK>
+    </TestCase>
+    <TestCase>
+      <Name>Add Community</Name>
+      <WorkflowId_FK>
+        <string>4661fda5-8cf5-4fee-80ea-946ac520a313</string>
+        <string>e542372d-9cf7-4524-b45f-2f212d27fcfc</string>
+        <string>259120f6-974d-4aa5-91e2-5504f472ea0e</string>
+        <string>a92f0015-00f2-4be1-b967-ce0fa62e5a4e</string>
+        <string>2eb5af99-f744-4067-8941-e1c962dbf347</string>
+        <string>906e9e79-4761-424d-b42b-bad6c4845164</string>
+        <string>d4c5f903-f994-4e7d-9c26-39c918a0e126</string>
+        <string>9e062d98-b94b-478c-93ea-bb475f85dc3d</string>
+        <string>b935eb59-aa94-42d7-9172-d7ea59a2062a</string>
+        <string>7d9f586f-f592-429c-b3e5-18f5f35994fc</string>
+        <string>90b1aa6b-74c6-4e7f-95a2-91dac33f482c</string>
+      </WorkflowId_FK>
+    </TestCase>
+  </TestCases>
+</Project>
