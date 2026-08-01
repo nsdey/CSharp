@@ -1,0 +1,38 @@
+﻿<Page x:Class="QA_Master.Forms.Pages.Page_PerformEnterText"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QA_Master.Forms.Pages" xmlns:c="clr-namespace:CalcBinding;assembly=CalcBinding"
+      mc:Ignorable="d"
+      d:Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
+      Height="Auto"
+      d:DesignWidth="800"
+      Title="PerformCommon">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+    
+        <Label Grid.Row="0" Grid.Column="0" Content="Value :" Name="lblValue" />
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtValue" d:Text="Sample Value" TextChanged="txtValue_TextChanged" />
+
+        <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Content="Insert Expression..." Name="btnInsertExpression" Click="btnInsertExpression_Click"
+                Width="{c:Binding RelativeSource={RelativeSource Self}, Path=FontSize*10}" >
+            <Button.ContextMenu>
+                <ContextMenu Name="btnInsertExpression_ContextMenu" />
+            </Button.ContextMenu>
+        </Button>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Preview :" VerticalAlignment="Top" />
+        <TextBox Grid.Row="2" Grid.Column="1" Name="txtPreview" d:Text="Expression" IsReadOnly="True"
+               HorizontalContentAlignment="Left" VerticalContentAlignment="Top"
+               Height="{c:Binding RelativeSource={RelativeSource Self}, Path=FontSize*4}" />
+    </Grid>
+</Page>

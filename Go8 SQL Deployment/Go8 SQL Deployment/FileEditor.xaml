@@ -1,0 +1,27 @@
+﻿<Window x:Class="Go8_SQL_Deployment.FileEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Go8_SQL_Deployment"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanResize"
+        Title="FileEditor" Height="600" Width="800">
+    <DockPanel Margin="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Name="txtEditor" AcceptsReturn="True" FontFamily="Consolas" FontWeight="Light" FontSize="12" Background="#151515" Foreground="White" d:Text="Sample" Padding="5" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" />
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="btnOk" Content="Ok" Margin="5" Height="24" Width="70" Click="btnOk_Click" />
+                <Button Name="btnCancel" Content="Cancel" Margin="5"  Width="70" Click="btnCancel_Click" />
+            </StackPanel>
+        
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="QA_Master.Forms.Pages.Page_ActionNavigate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QA_Master.Forms.Pages" xmlns:c="clr-namespace:CalcBinding;assembly=CalcBinding"
+      mc:Ignorable="d"
+      d:Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
+      Height="Auto"
+      d:DesignWidth="800"
+      Title="Page_ActionCommon">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="7*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Value :" Name="lblValue" VerticalContentAlignment="Top" />
+            <TextBox Grid.Row="0" Grid.Column="1" Name="txtValue" d:Text="Sample Value" Height="{c:Binding RelativeSource={RelativeSource Self}, Path=FontSize*4}" />
+
+            <Label Grid.Row="1" Content="Site Authentication" />
+
+            <Label Grid.Row="2" Content="User Name :" />
+            
+            <Label Grid.Row="3" Content="Password :" />
+        </Grid>
+    </Grid>
+</Page>
