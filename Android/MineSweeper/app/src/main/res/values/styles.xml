@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MineSweeper</string>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#455A64</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
