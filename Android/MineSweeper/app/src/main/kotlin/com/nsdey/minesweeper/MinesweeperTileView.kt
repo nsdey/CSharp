@@ -1,10 +1,12 @@
 package com.nsdey.minesweeper
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.Rect
 import android.graphics.RectF
-import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -48,16 +50,29 @@ class MinesweeperTileView @JvmOverloads constructor(
     private val paint = Paint().apply {
         style = Paint.Style.FILL
         isAntiAlias = false
-        isSubpixelText = false
-        typeface = Typeface.create("monospace", Typeface.BOLD)
     }
+    private val spritePaint = Paint().apply {
+        isAntiAlias = false
+        isFilterBitmap = false
+    }
+    private val spaceTexture: Bitmap = BitmapFactory.decodeResource(resources, R.drawable.spacetextures)
+    private val numberOffsets = intArrayOf(112, 96, 80, 64, 48, 32, 16, 0)
     private var pressedFromClosed = false
     private val bounds = RectF()
 
     init {
         isClickable = true
         isFocusable = true
+        GameScale.observe(this)
         updateDescription()
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val baseCell = GameScale.scaledPixels(context, 16f).toInt()
+        setMeasuredDimension(
+            resolveSize(baseCell, widthMeasureSpec),
+            resolveSize(baseCell, heightMeasureSpec)
+        )
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -69,7 +84,7 @@ class MinesweeperTileView @JvmOverloads constructor(
         val left = (width - side) / 2f
         val top = (height - side) / 2f
         bounds.set(left, top, left + side, top + side)
-        val edge = (side * 0.10f).coerceAtLeast(1f).coerceAtMost(3f * resources.displayMetrics.density)
+        val edge = (side * 0.10f).coerceAtLeast(GameScale.scaledPixels(context, 1f))
 
         when (state) {
             State.CLOSED -> drawRaised(canvas, edge)
@@ -106,7 +121,7 @@ class MinesweeperTileView @JvmOverloads constructor(
 
         // Each tile contributes half of a line to each edge, so neighboring open
         // tiles join into a crisp one-dp grid without doubled seams.
-        val halfGrid = (resources.displayMetrics.density * 0.5f).coerceAtLeast(0.5f)
+        val halfGrid = GameScale.scaledPixels(context, 0.5f).coerceAtLeast(0.5f)
         fill(canvas, bounds.left, bounds.top, bounds.right, bounds.top + halfGrid, COLOR_GRID)
         fill(canvas, bounds.left, bounds.top, bounds.left + halfGrid, bounds.bottom, COLOR_GRID)
         fill(canvas, bounds.left, bounds.bottom - halfGrid, bounds.right, bounds.bottom, COLOR_GRID)
@@ -115,13 +130,8 @@ class MinesweeperTileView @JvmOverloads constructor(
 
     private fun drawNumber(canvas: Canvas) {
         val value = number ?: return
-        val side = minOf(width, height).toFloat()
-        paint.color = NUMBER_COLORS[value - 1]
-        paint.textSize = side * 0.74f
-        paint.textAlign = Paint.Align.CENTER
-        val x = width / 2f
-        val y = height / 2f - (paint.ascent() + paint.descent()) / 2f
-        canvas.drawText(value.toString(), x, y, paint)
+        val sourceTop = numberOffsets[value - 1]
+        canvas.drawBitmap(spaceTexture, Rect(0, sourceTop, 16, sourceTop + 16), bounds, spritePaint)
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -160,6 +170,11 @@ class MinesweeperTileView @JvmOverloads constructor(
         return true
     }
 
+    override fun onDetachedFromWindow() {
+        GameScale.stopObserving(this)
+        super.onDetachedFromWindow()
+    }
+
     private fun contains(x: Float, y: Float): Boolean = x >= 0f && y >= 0f && x < width && y < height
 
     private fun updateDescription() {
@@ -189,15 +204,5 @@ class MinesweeperTileView @JvmOverloads constructor(
         const val COLOR_GRID = 0xFF808080.toInt()
         const val COLOR_DARK = 0xFF707070.toInt()
 
-        val NUMBER_COLORS = intArrayOf(
-            0xFF0000FF.toInt(), // 1: blue
-            0xFF008000.toInt(), // 2: green
-            0xFFFF0000.toInt(), // 3: red
-            0xFF000080.toInt(), // 4: navy
-            0xFF800000.toInt(), // 5: maroon
-            0xFF008080.toInt(), // 6: teal
-            0xFF000000.toInt(), // 7: black
-            0xFF808080.toInt()  // 8: gray
-        )
     }
 }
