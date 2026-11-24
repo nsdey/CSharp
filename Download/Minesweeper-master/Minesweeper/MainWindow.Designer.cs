@@ -230,7 +230,7 @@ namespace Minesweeper
             this.Controls.Add(this.minefieldInstance);
             this.Controls.Add(this.minefieldBackDropInstance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Menu = this.mainMenu1;
             this.Name = "MainWindow";
